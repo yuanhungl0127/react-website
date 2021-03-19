@@ -1,0 +1,13 @@
+.ui.text.container{
+    text-align: center;
+    margin-top: 3em;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+h1.ui.header {
+    font-size: 4rem;
+}
+h2.ui.header {
+    font-weight: normal;
+}

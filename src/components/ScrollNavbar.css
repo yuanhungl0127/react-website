@@ -1,0 +1,43 @@
+.scroll-NavbarItems {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 80px;
+    background: #FFFFFF;
+    opacity: 0;
+    transition:all 0.5s ease;
+    z-index: 1;
+    border:1px solid rgba(34, 36, 38, 0.15);
+    box-shadow: 0px 1px 2px 0 rgb(34 36 38 / 15%);
+}
+
+.scroll-NavbarItems.active {
+    position: fixed;
+    display: flex;
+    opacity: 1;
+    transition:all 0.5s ease;
+}
+.scroll-nav-menu{
+    list-style: none;
+    display:flex;
+    width: 80vw;
+}
+.scroll-nav-link {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+    cursor: pointer;
+}
+.scroll-nav-link:hover{
+    background-color: lightgrey;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s ease;
+}
