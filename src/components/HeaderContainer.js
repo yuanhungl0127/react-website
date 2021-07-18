@@ -4,11 +4,11 @@ import "./HeaderContainer.css"
 const HeaderContainer = () => {
     return (
         <div className="ui text container myContainer">
-            <h1 className="ui inverted header">
-                A Software Engineer
-            </h1>
-            <h2 className="ui inverted header">Stay Hungry. Stay Foolish.</h2>
-            <div className="ui huge primary button">
+            <h2 className="ui inverted header">
+                YuanHung Lin
+            </h2>
+            <h3 className="ui inverted header">A software engineer</h3>
+            <div className="ui huge primary button" id="header-github">
                 GitHub 
                 <i className="right arrow icon"></i>
             </div>

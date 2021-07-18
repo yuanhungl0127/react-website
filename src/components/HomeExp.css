@@ -1,0 +1,82 @@
+.card-container {
+    margin: 0 76.5px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.exp-header {
+    margin: 14px auto;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 600px;
+    margin: 10px 20px;
+    overflow: hidden;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+    border: 1px solid rgba(34,36,38,.15);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    /* box-shadow: 0 0 11px rgba(33,33,33,.2);  */
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+}
+.card-img img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: .28571429rem;
+    border-bottom:1px solid rgba(34,36,38,.15);;
+}
+
+.card-header, .card-text {
+    margin: 15px auto;
+    padding: 10px
+}
+
+.card-text {
+    min-height: 100px;
+}
+
+.btn-container{
+
+    display: flex;
+    justify-content: center;
+}
+
+.ui.button.card-btn {
+    margin: 2px auto;
+}
+
+
+.swiper-prev, .swiper-next{
+    font-size: 3em;
+    color:#e0e1e2;
+    margin: auto 5px;
+    position: absolute;
+    z-index: 10;
+}
+.swiper-next {
+    top:50%;
+    right:-50px;
+}
+.swiper-prev{
+    top: 50%;
+    left: -50px;
+}
+
+.swiper-next:hover, .swiper-prev:hover {
+    color: rgba(0, 0, 0, 0.25);
+}

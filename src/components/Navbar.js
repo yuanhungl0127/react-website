@@ -8,6 +8,11 @@ const Navbar = () => {
         setMenuClicked(!menuClicked);
     }
 
+    // Redirect to my resume
+    const redirectResume = ()=>{
+        document.location.href = ""
+    }
+
     return (
         <div className="NavbarItems">
             <div className="menu-icon" onClick={onClickMenu}>
@@ -19,7 +24,7 @@ const Navbar = () => {
                 <li><a className="nav-link">Experience</a></li>
                 <li><a className="nav-link">Education</a></li>
             </ul>
-            <div className="ui button inverted nav-btn">
+            <div className="ui button inverted nav-btn" onClick={redirectResume}>
                 RESUME
                 <i style={{paddingLeft:"10px"}} className="fa fa-download"/>
             </div>
