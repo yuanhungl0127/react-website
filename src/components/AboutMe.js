@@ -1,50 +1,67 @@
 import React from "react";
 import { aboutMeContents } from "./AboutMeContent";
+import "./AboutMe.css";
+import me from "../images/me.JPG";
 
 const AboutMe = () => {
     return (
-        <div className="ui grid container" style={{padding:"8em 0em"}}>
-            <div className="row">
+        <div id="about-me" className="ui grid container" style={{padding:"8em 0em"}}>
+            <div id="intro" className="row">
+                <div className="four wide column about-me-header">
+                    <h1 id="intro-header" className="ui header">
+                    <span className="header-border">About Me</span>
+                    </h1>
+                </div>
+                <div className={(window.innerWidth>=670)?"six wide column":"ten wide column"}>
+                    <p className="intro-content">{aboutMeContents.introduction}</p>
+                    <div>
+                        <h3 className="contact-details">Contact Details</h3>
+                        <p className="intro-content">+61 0423876592</p>
+                        <p className="intro-content">vicclaire0509@gmail.com</p>
+                    </div>
+                </div>
+                <div id="intro-img" className="four wide right floated column">
+                    <img src={me} alt="intro"/>
+                </div>
+            </div>
+            <div id="edu" className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey", padding: "20px 0"}}>
+                <div className="four wide column about-me-header">
+                    <h1 id="intro-header" className="ui header">
+                    <span className="header-border">Skills</span>
+                    </h1>
+                </div>
+                <div id="skill-container" className={(window.innerWidth>=670)?"eight wide column":"ten wide column"}>
+                    {aboutMeContents.skills.map((skill,index)=>{
+                        return (
+                            <div key={index} className="skill-item">
+                                {skill.icon}
+                                <p className="skill-content intro-content">{skill.text}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+            <div id="education" className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey", padding: "20px 0"}}>
+                <div className="four wide column about-me-header">
+                    <h1 id="intro-header" className="ui header">
+                    <span className="header-border">Education</span>
+                    </h1>
+                </div>
                 <div className="ten wide column">
-                    <h1 className="ui header" style={{fontSize:"2em"}}>
-                    All About Yuan
-                    </h1>
-                    <p style={{lineHeight:"1.7rem"}}>{aboutMeContents.introduction}</p>
-                </div>
-                <div className="four wide right floated column">
-                    img comes here
+                    <p className="edu-content intro-content"><span style={{fontWeight: "bold", color: "black"}}> # Master of Information Technology </span>/ University of Melbourne / 2020~2021</p>
+                    <p className="edu-content intro-content"><span style={{fontWeight: "bold", color: "black"}}> # Bachelor of Risk Management </span>/ National ChengChi University (Taiwan) / 2009~2013</p>
                 </div>
             </div>
-            <div className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey"}}>
-                <div className="sixteen wide column">
-                    <h1 className="ui header" style={{fontSize:"2em"}}>
-                    Professional Skills
+            <div id="experience" className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey", padding: "20px 0"}}>
+                <div className="four wide column about-me-header">
+                    <h1 id="intro-header" className="ui header">
+                    <span className="header-border">Experience</span>
                     </h1>
-                    <p style={{lineHeight:"1.7rem"}}>{aboutMeContents.skills}</p>
                 </div>
-            </div>
-            <div className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey"}}>
-                <div className="sixteen wide column">
-                    <h1 className="ui header" style={{fontSize:"2em"}}>
-                    Education
-                    </h1>
-                    <h3 style={{lineHeight:"1.7rem"}}>Master of Information Technology / University of Melbourne / 2020~2021</h3>
-                    <h3 style={{lineHeight:"1.7rem"}}>Bachelor of Risk Management / National ChengChi University (Taiwan) / 2009~2013</h3>
-                </div>
-            </div>
-            <div className="row" style={{marginTop:"30px", borderTop:"1px solid lightgrey"}}>
-                <div className="sixteen wide column">
-                    <h1 className="ui header" style={{fontSize:"2em"}}>
-                    Work Experience
-                    </h1>
-                    <h3 style={{lineHeight:"1.7rem"}}>Web developer - Internship / Vmor Technology (Sydney) / 2021 Mar ~ 2021 June</h3>
-                    <h3 style={{lineHeight:"1.7rem"}}>Risk specialist / Cathay Financial Holding Company (Taiwan) / 2014 Sep ~ 2019 Mar</h3>
-                    <h3 style={{lineHeight:"1.7rem"}}>Internship / Fubon Financial Holding Company (Taiwan) / 2013 Jul ~ 2013 Sep</h3>
-                </div>
-            </div>
-            <div className="row" style={{marginTop:"30px"}}>
-                <div className="center aligned column">
-                    <a className="ui huge button">Check Them Out</a>
+                <div className="ten wide column">
+                    <p className="work-content intro-content"><span style={{fontWeight: "bold", color: "black"}}> # Web developer - Internship </span>/ Vmor Technology (Sydney) / 2021 Mar ~ 2021 June</p>
+                    <p className="work-content intro-content"><span style={{fontWeight: "bold", color: "black"}}> # Risk specialist </span>/ Cathay Financial Holding Company (Taiwan) / 2014 Sep ~ 2019 Mar</p>
+                    <p className="work-content intro-content"><span style={{fontWeight: "bold", color: "black"}}> # Internship </span>/ Fubon Financial Holding Company (Taiwan) / 2013 Jul ~ 2013 Sep</p>
                 </div>
             </div>
         </div>

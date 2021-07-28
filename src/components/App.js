@@ -5,6 +5,7 @@ import "./App.css";
 import AboutMe from "./AboutMe";
 import ScrollNavbar from "./ScrollNavbar";
 import HomeExp from "./HomeExp";
+import Footer from "./Footer";
 
 
 const App = () =>{ 
@@ -16,10 +17,10 @@ const App = () =>{
 
   return (
     <div>
-      <div className="header-container">
-      <Navbar/>
-      <ScrollNavbar scrollY={scrollY}/>
-      <HeaderContainer/>
+      <div id="home" className="header-container">
+        <Navbar/>
+        {(window.innerWidth >= 768)? <ScrollNavbar scrollY={scrollY}/>: null}
+        <HeaderContainer/>
       </div>
       <div>
         <AboutMe/>
@@ -27,6 +28,7 @@ const App = () =>{
       <div>
         <HomeExp/>
       </div>
+      <Footer/>
     </div>
   )
 }

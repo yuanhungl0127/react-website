@@ -1,5 +1,7 @@
 .header-container {
-    background: #1B1C1D;
     min-height: 700px;
     box-sizing: border-box;
+    background: url("../images/bg.jpg");
+    background-size: cover;
+    background-color: transparent;
 }

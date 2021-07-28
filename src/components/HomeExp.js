@@ -16,14 +16,19 @@ const renderedList = HomeExpItems.map((item) => {
                 </div>
                 <div className="card-content">
                     <div className="card-header"><h3>{item.title}</h3></div>
-                    <div className="card-text"><p>{item.text}</p></div>
+                    <div className="card-text">
+                        <p style={{fontSize: "16px", fontWeight: "600"}}>Technologies stack :</p>
+                        {item.text.map((skill)=>{
+                            return <p key={skill}># {skill}</p>
+                        })}
+                    </div>
                 </div>
                 <div className="btn-container">
-                    <div className="ui button seconday card-btn">Demo</div>
-                    <div className="ui primary button card-btn">
-                    GitHub 
-                        <i className="right arrow icon"></i>
-                    </div>
+                    {(item.demo.url)? <a href={item.demo.url} className="ui button seconday card-btn"><span id="demo-btn">Demo</span></a>: null}
+                    
+                    {(item.title === "Rumour Detection (NLP)")? null : <a href={item.github} className="ui primary button card-btn"><span id="git-btn" >GitHub</span><i className="right arrow icon"></i>
+                    </a>}
+                    
                 </div>
             </div>
         </SwiperSlide>
@@ -32,9 +37,9 @@ const renderedList = HomeExpItems.map((item) => {
 
 const HomeExp = () => {
     return (
-        <div className="card-container">
+        <div id="exp" className="card-container" style={{borderTop:"1px solid lightgrey"}}>
             <div className="exp-header">
-                <h1>Projects</h1>
+                <p>CHECK OUT SOME OF MY WORKS.</p>
             </div>
             <a href="/" className="swiper-prev">
                 <i className="fa fa-angle-left"/>
@@ -44,7 +49,7 @@ const HomeExp = () => {
             </a>
             <Swiper
                 id="main"
-                slidesPerView={3}
+                slidesPerView={(window.innerWidth >= 900) ? 3 : 1}
                 loop={true}
                 navigation={{nextEl:".swiper-next", prevEl:".swiper-prev"}}
             >

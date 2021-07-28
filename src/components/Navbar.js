@@ -10,7 +10,7 @@ const Navbar = () => {
 
     // Redirect to my resume
     const redirectResume = ()=>{
-        document.location.href = ""
+        document.location.href = "https://drive.google.com/file/d/1mqWUzIDYe54wNytP1drybciFKvL3JAJH/view?usp=sharing"
     }
 
     return (
@@ -19,10 +19,10 @@ const Navbar = () => {
                 {(menuClicked) ? <i className="fa fa-times fa-lg"/> : <i className="fa fa-bars fa-lg"/>}
             </div>
             <ul className={(menuClicked)?"nav-menu active":"nav-menu"}>
-                <li><a className="nav-link">Home</a></li>
-                <li><a className="nav-link">About Me</a></li>
-                <li><a className="nav-link">Experience</a></li>
-                <li><a className="nav-link">Education</a></li>
+                <li><a href="#home" className="nav-link">Home</a></li>
+                <li><a href="#about-me" className="nav-link">About Me</a></li>
+                <li><a href="#exp" className="nav-link">Experience</a></li>
+                <li><a href="#edu" className="nav-link">Education</a></li>
             </ul>
             <div className="ui button inverted nav-btn" onClick={redirectResume}>
                 RESUME

@@ -6,16 +6,16 @@ const ScrollNavbar = (state) =>{
 
     // Redirect to my resume
     const redirectResume = ()=>{
-        document.location.href = "";
+        document.location.href = "https://drive.google.com/file/d/1mqWUzIDYe54wNytP1drybciFKvL3JAJH/view?usp=sharing";
     }
 
     return (
         <div className={(state.scrollY >=HEADERHEIGHT)?"scroll-NavbarItems active":"scroll-NavbarItems"}>
             <ul className="scroll-nav-menu">
-                <li><a className="scroll-nav-link">Home</a></li>
-                <li><a className="scroll-nav-link">About Me</a></li>
-                <li><a className="scroll-nav-link">Experience</a></li>
-                <li><a className="scroll-nav-link">Education</a></li>
+                <li><a href="#home" className="scroll-nav-link">Home</a></li>
+                <li><a href="#about-me" className="scroll-nav-link">About Me</a></li>
+                <li><a href="#exp" className="scroll-nav-link">Experience</a></li>
+                <li><a href="#edu" className="scroll-nav-link">Education</a></li>
             </ul>
             <div className="ui button nav-btn" onClick={redirectResume}>
                 RESUME
