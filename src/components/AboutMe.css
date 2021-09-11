@@ -67,4 +67,10 @@
     .intro-content{
         font-size: 0.8rem;
     }
+
+    #skill-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
 }
